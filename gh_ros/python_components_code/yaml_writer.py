@@ -86,7 +86,7 @@ def set_pose_quaternion(frame_origin, frame):
             q.D = 0.5 * s
             q.A = (matrix.M01 - matrix.M10) * inv_s
 
-    return [str(q.A), str(q.B), str(q.C), str(q.D)]
+    return [str(q.B), str(q.C), str(q.D), str(q.A)]
 
 def path_to_str(_origin, frames):
     path_str = ''
@@ -134,6 +134,7 @@ def main(origin, planes):
     path = path_to_str(origin, planes)
     header = 'path:\n'
     toolpath = header+path
+    yaml = toolpath
     write_yaml(file_path,toolpath)
     print('yaml file generated')
 
