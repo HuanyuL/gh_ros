@@ -50,6 +50,7 @@ sudo apt install ros-noetic-rosbridge-suite
 
 ```bash
 roslaunch rosbridge_server rosbridge_websocket.launch
+```
 
 Reference
 
